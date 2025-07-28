@@ -2,6 +2,7 @@ import "./App.css";
 import { NavLink, Routes, Route } from "react-router-dom";
 import Home from "./Paths/Home";
 import CreateMon from "./Paths/CreateMon";
+import Gallery from "./Paths/Gallery";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateMon />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </main>
     </>
