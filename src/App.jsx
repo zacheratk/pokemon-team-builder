@@ -1,8 +1,8 @@
 import "./App.css";
 import { NavLink, Routes, Route } from "react-router-dom";
-import Home from "./Paths/Home";
-import CreateMon from "./Paths/CreateMon";
-import Gallery from "./Paths/Gallery";
+import Home from "./Routes/Home";
+import CreateMon from "./Routes/CreateMon";
+import Gallery from "./Routes/Gallery";
 
 const App = () => {
   return (
