@@ -1,6 +1,7 @@
 import "./App.css";
 import { NavLink, Routes, Route } from "react-router-dom";
 import Home from "./Paths/Home";
+import CreateMon from "./Paths/CreateMon";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/create" element={<CreateMon />} />
         </Routes>
       </main>
     </>
