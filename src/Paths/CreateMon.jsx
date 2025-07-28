@@ -1,5 +1,5 @@
-import availableSpecies from "../../public/availableSpecies.json";
-import availableNatures from "../../public/availableNatures.json";
+import availableSpecies from "../Data/availableSpecies.json";
+import availableNatures from "../Data/availableNatures.json";
 const CreateMon = () => {
   return (
     <>
