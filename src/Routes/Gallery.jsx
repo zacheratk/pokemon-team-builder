@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { supabase } from "../APIs/supabaseClient";
+import { getAllData } from "../APIs/getSupabaseData";
 import Card from "../Components/Card";
 
 const Gallery = () => {
@@ -8,18 +8,14 @@ const Gallery = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchTeam = async () => {
-      setIsLoading(true);
-      const { data } = await supabase
-        .from("Pokemon")
-        .select()
-        .order("created_at", { ascending: true });
-
-      setMembers(data);
-      setIsLoading(false);
-    };
-
-    fetchTeam();
+    setIsLoading(true);
+    getAllData()
+      .then((data) => {
+        setMembers(data);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   return (
