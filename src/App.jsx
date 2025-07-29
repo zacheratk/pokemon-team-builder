@@ -3,6 +3,7 @@ import { NavLink, Routes, Route } from "react-router-dom";
 import Home from "./Routes/Home";
 import CreateMon from "./Routes/CreateMon";
 import Gallery from "./Routes/Gallery";
+import DetailView from "./Routes/DetailView";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateMon />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="gallery/:id" element={<DetailView />} />
         </Routes>
       </main>
     </>
