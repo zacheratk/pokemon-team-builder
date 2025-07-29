@@ -5,15 +5,18 @@ import Card from "../Components/Card";
 
 const Gallery = () => {
   const [members, setMembers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchTeam = async () => {
+      setIsLoading(true);
       const { data } = await supabase
         .from("Pokemon")
         .select()
         .order("created_at", { ascending: true });
 
       setMembers(data);
+      setIsLoading(false);
     };
 
     fetchTeam();
@@ -23,7 +26,9 @@ const Gallery = () => {
     <>
       <h1>Team Members</h1>
 
-      {members.length > 0 ? (
+      {isLoading ? (
+        <h2>Loading</h2>
+      ) : members.length > 0 ? (
         <div className="container">
           {members.map((member) => (
             <Card
