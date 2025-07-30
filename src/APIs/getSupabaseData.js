@@ -5,7 +5,7 @@ export const getAllData = async () => {
     const { data, error } = await supabase
       .from("Pokemon")
       .select()
-      .order("created_at", { ascending: true });
+      .order("created_at", { ascending: false });
 
     if (error) {
       console.error("Error fetching all data:", error);
