@@ -23,7 +23,7 @@ const Gallery = () => {
       <h1>Team Members</h1>
 
       {isLoading ? (
-        <h2>Loading</h2>
+        <div className="loading"></div>
       ) : members.length > 0 ? (
         <div className="container">
           {members.map((member) => (
@@ -42,7 +42,7 @@ const Gallery = () => {
           <h2>You haven't added any team members!</h2>
           <p>To see your team members, you first need to add a team member</p>
           <Link to="/create">
-            <button>Create Member</button>
+            <button className="btn-success">Create Member</button>
           </Link>
         </>
       )}

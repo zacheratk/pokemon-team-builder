@@ -9,10 +9,10 @@ const Card = (props) => {
       <img src={props.sprite} alt={props.species} />
       <p>Nature: {props.nature}</p>
       <Link to={"/gallery/" + props.id}>
-        <button>View Details</button>
+        <button className="btn-primary">View Details</button>
       </Link>
       <Link to={"/edit/" + props.id}>
-        <button>Edit</button>
+        <button className="btn-warning">Edit</button>
       </Link>
     </div>
   );

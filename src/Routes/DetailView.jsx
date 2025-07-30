@@ -25,7 +25,7 @@ const DetailView = () => {
   };
 
   return (
-    <article>
+    <article className="card">
       {isLoading ? (
         <h1>Loading</h1>
       ) : (
@@ -43,7 +43,7 @@ const DetailView = () => {
       )}
       <div>
         <Link to={"/edit/" + id}>
-          <button>Edit</button>
+          <button className="btn-warning">Edit</button>
         </Link>
         <button onClick={handleDelete}>Delete</button>
       </div>

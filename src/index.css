@@ -22,6 +22,9 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  /* Fun flat design background */
+  background: #667eea;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* 6. Improve media defaults */
@@ -72,4 +75,33 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* Additional fun flat design elements */
+::selection {
+  background: #ff6b6b;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ecf0f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff6b6b;
+  border-radius: 10px;
+  border: 2px solid #ecf0f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e74c3c;
+}
+
+body {
+  overflow-x: hidden;
 }
