@@ -14,7 +14,6 @@ const CreateMon = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(`Updating ${name} to ${value}`);
     if (name === "species") {
       const speciesObj = availableSpecies.find(
         (species) => species.id === parseInt(value)
@@ -34,15 +33,16 @@ const CreateMon = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formOptions);
     const { description, sprite } = await getPokeData(
       formOptions.pokedex_number
     );
+    const nickname =
+      formOptions.nickname === "" ? formOptions.species : formOptions.nickname;
 
     await supabase
       .from("Pokemon")
       .insert({
-        nickname: formOptions.nickname,
+        nickname: nickname,
         species: formOptions.species,
         pokedex_number: formOptions.pokedex_number,
         nature: formOptions.nature,
@@ -51,7 +51,7 @@ const CreateMon = () => {
       })
       .select();
 
-    // window.location = "/gallery";
+    window.location = "/gallery";
   };
 
   return (
@@ -63,7 +63,7 @@ const CreateMon = () => {
         <select
           name="species"
           id="species"
-          value={formOptions.species}
+          value={formOptions.id}
           onChange={handleChange}
           required
         >
