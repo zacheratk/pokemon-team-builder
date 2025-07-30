@@ -1,6 +1,13 @@
 import { Link, Navigate } from "react-router-dom";
+import { removeDataById } from "../APIs/getSupabaseData";
 
 const Card = (props) => {
+  const handleDelete = async () => {
+    await removeDataById(props.id);
+
+    window.location.reload();
+  };
+
   return (
     <div className="card">
       <h3>
@@ -14,6 +21,7 @@ const Card = (props) => {
       <Link to={"/edit/" + props.id}>
         <button className="btn-warning">Edit</button>
       </Link>
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };

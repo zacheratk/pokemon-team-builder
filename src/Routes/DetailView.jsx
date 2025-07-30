@@ -48,7 +48,7 @@ const DetailView = () => {
         <button onClick={handleDelete}>Delete</button>
       </div>
       <Link to="/gallery">
-        <button>Go Back</button>
+        <button className="btn-primary">Go Back</button>
       </Link>
     </article>
   );
