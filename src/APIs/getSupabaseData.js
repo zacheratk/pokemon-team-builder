@@ -35,3 +35,16 @@ export const getDataById = async (id) => {
     return null;
   }
 };
+
+export const removeDataById = async (id) => {
+  try {
+    const { error } = await supabase.from("Pokemon").delete().eq("id", id);
+    if (error) {
+      console.error("Error deleting data by ID:", error);
+      return false;
+    }
+  } catch (error) {
+    console.error("Unexpected error:", error);
+    return false;
+  }
+};

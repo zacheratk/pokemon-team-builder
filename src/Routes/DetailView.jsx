@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getDataById } from "../APIs/getSupabaseData";
 import { Link, useParams } from "react-router-dom";
+import { removeDataById } from "../APIs/getSupabaseData";
 
 const DetailView = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,6 +17,12 @@ const DetailView = () => {
         setIsLoading(false);
       });
   }, []);
+
+  const handleDelete = async () => {
+    await removeDataById(id);
+
+    window.location = "/gallery";
+  };
 
   return (
     <article>
@@ -34,9 +41,12 @@ const DetailView = () => {
           <p>{member.description}</p>
         </>
       )}
-      <Link to={"/edit/" + id}>
-        <button>Edit</button>
-      </Link>
+      <div>
+        <Link to={"/edit/" + id}>
+          <button>Edit</button>
+        </Link>
+        <button onClick={handleDelete}>Delete</button>
+      </div>
       <Link to="/gallery">
         <button>Go Back</button>
       </Link>

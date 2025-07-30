@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getDataById } from "../APIs/getSupabaseData";
+import { getDataById, removeDataById } from "../APIs/getSupabaseData";
 import { supabase } from "../APIs/supabaseClient";
 import getPokeData from "../APIs/getPokeData";
 import availableSpecies from "../Data/availableSpecies.json";
@@ -76,6 +76,12 @@ const EditMon = () => {
     window.location = "/gallery";
   };
 
+  const handleDelete = async () => {
+    await removeDataById(id);
+
+    window.location = "/gallery";
+  };
+
   return (
     <>
       <h1>Edit Member</h1>
@@ -126,7 +132,8 @@ const EditMon = () => {
               </div>
             ))}
           </fieldset>
-          <button type="submit">Create party member!</button>
+          <button type="submit">Update Member</button>
+          <button onClick={handleDelete}>Delete</button>
         </form>
       )}
     </>
