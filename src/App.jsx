@@ -4,6 +4,7 @@ import Home from "./Routes/Home";
 import CreateMon from "./Routes/CreateMon";
 import Gallery from "./Routes/Gallery";
 import DetailView from "./Routes/DetailView";
+import EditMon from "./Routes/EditMon";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/create" element={<CreateMon />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="gallery/:id" element={<DetailView />} />
+          <Route path="edit/:id" element={<EditMon />} />
         </Routes>
       </main>
     </>

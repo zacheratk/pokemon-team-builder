@@ -11,6 +11,9 @@ const Card = (props) => {
       <Link to={"/gallery/" + props.id}>
         <button>View Details</button>
       </Link>
+      <Link to={"/edit/" + props.id}>
+        <button>Edit</button>
+      </Link>
     </div>
   );
 };

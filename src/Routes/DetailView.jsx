@@ -34,6 +34,9 @@ const DetailView = () => {
           <p>{member.description}</p>
         </>
       )}
+      <Link to={"/edit/" + id}>
+        <button>Edit</button>
+      </Link>
       <Link to="/gallery">
         <button>Go Back</button>
       </Link>
