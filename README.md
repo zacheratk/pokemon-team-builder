@@ -1,67 +1,59 @@
-# Web Development Project 7 - *Pokémon Team Builder*
+# 🐾 Pokémon Team Builder
 
-Submitted by: **Zachariah Herrera Atkins**
+**Pokémon Team Builder** is a web app that lets users create, customize, and manage their own personalized Pokémon teams. Built with React and Supabase, the app provides persistent storage, dynamic detail pages, and real-time updates for a fun and interactive experience.  
 
-This web app: Here is where you can create your own personalized Pokémon team!
+---
 
-Time spent: **5** hours spent in total
+## 🚀 Features
 
-## Required Features
+- **Create Your Team**: Add new Pokémon with custom names and attributes.  
+- **Team Summary Page**: View all team members in one place, sorted by creation date with the newest at the top.  
+- **Edit & Update**: Quickly update Pokémon attributes with changes reflected instantly.  
+- **Delete Pokémon**: Remove a Pokémon from your team with a single click.  
+- **Detail Pages**: Each Pokémon has a unique page with additional info and a shareable URL.  
+- **Pokémon Sprites & Info**: Integrated with the [PokéAPI](https://pokeapi.co/) to display official sprites and species descriptions.  
+- **Persistent Storage**: All Pokémon teams are stored and managed through **Supabase**, ensuring data is saved securely across sessions.  
 
-The following **required** functionality is completed:
+---
 
+## 🛠️ Tech Stack
 
-- [x] **The web app contains a page that features a create form to add a new crewmate**
-  - Users can name the crewmate
-  - Users can set the crewmate’s attributes by clicking on one of several values
-- [x] **The web app includes a summary page of all the user’s added crewmates**
-  -  The web app contains a summary page dedicated to displaying all the crewmates the user has made so far
-  -  The summary page is sorted by creation date such that the most recently created crewmates appear at the top
-- [x] **A previously created crewmate can be updated from the list of crewmates in the summary page**
-  - Each crewmate has an edit button that will take users to an update form for the relevant crewmate
-  - Users can see the current attributes of their crewmate on the update form
-  - After editing the crewmate's attribute values using the form, the user can immediately see those changes reflected in the update form and on the summary page 
-- [x] **A previously created crewmate can be deleted from the crewmate list**
-  - Using the edit form detailed in the previous _crewmates can be updated_ feature, there is a button that allows users to delete that crewmate
-  - After deleting a crewmate, the crewmate should no longer be visible in the summary page
-  - [x] **Each crewmate has a direct, unique URL link to an info page about them**
-    - Clicking on a crewmate in the summary page navigates to a detail page for that crewmate
-    - The detail page contains extra information about the crewmate not included in the summary page
-    - Users can navigate to to the edit form from the detail page
+- **Frontend**: React.js, JavaScript, HTML5, CSS3  
+- **Backend/Database**: Supabase (PostgreSQL)  
+- **API Integration**: PokéAPI (RESTful API)  
 
-The following **optional** features are implemented:
+---
 
-- [ ] A crewmate can be given a category upon creation which restricts their attribute value options
-  - e.g., a Dungeons and Dragons class or a development team role (project manager, product owner, etc.)
-  - User can choose a `category` option to describe their crewmate before any attributes are specified
-  - Based on the category value, users are allowed to access only a subset of the possible attributes
-- [ ] A section of the summary page, displays summary statistics about a user’s crew on their crew page
-  - e.g., the percent of members with a certain attribute 
-- [ ] The summary page displays a custom “success” metric about a user’s crew which changes the look of the crewmate list
-  - e.g., a pirate crew’s predicted success at commandeering a new galley
+## 📸 Demo
 
+![Demo GIF](./public/demo.gif)  
+*A quick walkthrough of the app in action.*  
 
-The following **additional** features are implemented:
+---
 
-* [x] Add sprites to each team member based on species
-* [x] Add description to detail page based on species
+## 📖 Project Background
 
-## Video Walkthrough
+This project was originally developed as part of my web development coursework and later enhanced to highlight **real-world full-stack development practices**.  
 
-Here's a walkthrough of implemented user stories:
+### Challenges Solved
+- Implemented **create, read, update, and delete (CRUD)** operations with persistent storage in Supabase.  
+- Designed a clean, minimal UI for browsing and editing Pokémon teams.  
+- Integrated with the **PokéAPI** to provide dynamic sprites and descriptions.  
+- Connected frontend and backend seamlessly to handle both **real-time updates** and **data persistence**.  
 
-<img src='./public/demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+---
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with [Kap](https://getkap.co/) for macOS
+## 📈 Future Improvements
+- Add categories (e.g., Trainer Class or Role) to restrict attribute options.  
+- Display team statistics such as type distributions or success metrics.  
+- Enhance visuals with team-based performance indicators and custom styling.  
+- Build user authentication with Supabase to allow personal, persistent Pokémon teams.  
 
-## Notes
-
-To grab additional information from such as sprites and descriptions, I used the [RESTful Pokémon API](https://pokeapi.co/)
+---
 
 ## License
 
-    Copyright [2025] Zachariah Herrera Atkins
+    Copyright 2025 Zachariah M. Herrera Atkins
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
